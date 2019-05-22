@@ -1,0 +1,30 @@
+<div class="col-sm-12">
+    <div class="col-sm-12 holder-container table-content">
+    <h2 class="main-subtitle">Pregled tabele</h2>
+    <p *ngIf="loading">Loading...</p>
+    <div class="table-responsive">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col" class="min200">Igrač</th>
+            <th scope="col">Odigrano</th>
+            <th scope="col">Pobeda</th>
+            <th scope="col">Poraz</th>
+            <th scope="col">Bodovi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let player of players;let i = index">
+            <td scope="row">{{i+1}}</td>
+            <td>{{player.name}}</td>
+            <td class="fw600">{{player.played}}</td>
+            <td class="green-text fw600">{{player.wins}}</td>
+            <td class="red-text fw600">{{player.lose}}</td>
+            <td class="yellow-text fw600">{{player.score}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+</div>

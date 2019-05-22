@@ -1,0 +1,166 @@
+@import "../../assets/style/variables";
+@import "../../assets/style/mixins";
+
+.schedule-content {
+  color: white;
+  .groups {
+    flex-wrap: wrap;
+    button {
+        background: transparent;
+        border-radius: 50px;
+        margin-right: 15px;
+        margin-bottom: 12px;
+        border: solid 2px $general-color-dark;
+        color: $button-text;
+        height: 35px;
+        width: 35px;
+        text-align: center;
+        padding-top: 3px;
+        @include transition(all, 0.2s);
+        &.active{
+            background: $general-color-dark;
+            color: white;
+            @include box-shadow-darker();
+        }
+        &:hover{
+            background: $general-color-dark;
+            color: white;
+            @include transition(all, 0.2s);  
+        }
+        &:focus {
+            outline: 0;
+          }
+    }
+  }
+  
+  .schedule-container{
+    margin-top: 50px;
+
+    .holder-f{    
+        @media #{$mobile}{
+            max-width: 100%;
+            display: block !important;
+            margin-bottom: 20px;
+        }
+    }
+
+    .schedule-item{
+        background: #2f304b;
+        width: 590px; 
+        border-radius: 25px;
+        @include box-shadow();
+        margin-bottom: 10px;
+        overflow: hidden;
+        @media #{$mobile}{
+            max-width: 100%;
+            display: block !important;
+            border-radius: 0px;
+            margin-bottom: 0px;
+        }
+        .player{
+            padding: 10px 15px;
+            width: 250px;
+            text-align: center;
+        }
+        .playerone{
+            border-right: solid 1px $border-color;
+            @media #{$mobile}{
+                border-bottom: solid 1px $border-color;
+                border-right: none;
+                width: 100%;
+            }
+            &.win{
+                background: $win;
+            }
+            &.lose{
+                background: $lose;
+            }
+        }
+        .playertwo{
+            border-left: solid 1px $border-color;
+            @media #{$mobile}{
+                border-top: solid 1px $border-color;
+                border-left: none;
+                width: 100%;
+            }
+            &.win{
+                background: $win;
+            }
+            &.lose{
+                background: $lose;
+            }
+        }
+        .playerone-result{
+            padding: 10px 0px;
+            text-align: center;
+            border-right: solid 1px $border-color;
+            font-weight: 600;
+            width: 46px;
+            @media #{$mobile}{
+                display: inline-block;
+                width: 50%;
+            }
+            &.win{
+                color: #21deab8c;
+            }
+            &.lose{
+                color: #ff5959;
+            }
+        }
+        .playertwo-result{
+            padding: 10px 0px;
+            text-align: center;
+            font-weight: 600;
+            width: 46px;
+            @media #{$mobile}{
+                display: inline-block;
+                width: 50%;
+            }
+            &.win{
+                color: $win;
+            }
+            &.lose{
+                color: $lose;
+            }
+        }
+        .vs{
+            width: 113px;
+            padding: 10px 15px;
+            text-align: center;
+            font-weight: 500;
+            width: 90px;
+            @media #{$mobile}{
+                width:100%;
+            }
+        }
+      }
+      .edit{
+        cursor: pointer;
+        width: 45px;
+        height: 45px;
+        background: $general-color-dark;
+        border-radius: 50%;
+        margin-left: 16px;
+        @include box-shadow();
+        @media #{$mobile}{
+            margin-left: 0px;
+            width: 100%;
+            border-radius: 0px;
+        }
+        &:hover{
+            background: $general-color-darker;
+        }
+        img{
+            width: 17px;
+            margin: auto;
+            display: block;
+            margin-top: 14px;
+            @media #{$mobile}{
+                margin-top: 0px;
+                padding-top: 13px;
+            }
+        }
+      }
+  }
+
+}

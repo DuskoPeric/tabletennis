@@ -1,0 +1,32 @@
+<div class="col-sm-12 players-content holder-container">
+  <div class="col-sm-12">
+    <h2 class="main-subtitle">Igrači</h2>
+    <p *ngIf="loading">Loading...</p>
+    <div class="row">
+      <div *ngFor="let player of players" class="col-sm-3 player-container">
+        <div class="player-holder">
+          <div>
+            <p>{{ player.fname }}</p>
+            <p>{{ player.sname }}</p>
+          </div>
+          <div *ngIf="log"
+            data-toggle="modal"
+            data-target="#delete"
+            (click)="delete(player)"
+            class="edit"
+          >
+            <img src="assets/images/delete.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div *ngIf="log" class="col-sm-3 add-player">
+        <p data-toggle="modal" data-target="#add" (click)="add()">+</p>
+      </div>
+    </div>
+  </div>
+</div>
+<app-add *ngIf="popup" [obj]="player"></app-add>
+<app-confirm
+  [selectedPlayer]="selectedPlayer"
+  (confirm)="deletePlayer($event)"
+></app-confirm>

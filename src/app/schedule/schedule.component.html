@@ -1,0 +1,73 @@
+<div class="col-sm-12 schedule-content holder-container">
+  <div class="col-sm-12">
+    <h2 class="main-subtitle">Raspored mečeva</h2>
+    <p *ngIf="loading">Loading...</p>
+    <div class="groups flex">
+      <button
+        *ngFor="let tab of listItems; let i = index"
+        [class.active]="activeTab == i + 1"
+        (click)="changeTab(i + 1)"
+      >
+        {{ i + 1 }}
+      </button>
+    </div>
+    <div class="schedule-container">
+      <ng-container *ngFor="let group of listItems; let i = index">
+        <div class="schedule-list" *ngIf="activeTab == i + 1">
+          <div *ngFor="let game of group; let j = index" class="flex holder-f">
+            <div class="schedule-item flex">
+              <div
+                class="playerone player"
+                [class.win]="game.winner == 'p1'"
+                [class.lose]="game.winner == 'p2'"
+              >
+                {{ game.p1 }}
+              </div>
+              <div
+                class="playerone-result"
+                *ngIf="game.played"
+                [class.win]="game.winner == 'p1'"
+                [class.lose]="game.winner == 'p2'"
+              >
+                {{ game.p1r }}
+              </div>
+              <div
+                class="playertwo-result"
+                *ngIf="game.played"
+                [class.win]="game.winner == 'p2'"
+                [class.lose]="game.winner == 'p1'"
+              >
+                {{ game.p2r }}
+              </div>
+              <div class="vs" *ngIf="!game.played">VS</div>
+              <div
+                class="playertwo player"
+                [class.win]="game.winner == 'p2'"
+                [class.lose]="game.winner == 'p1'"
+              >
+                {{ game.p2 }}
+              </div>
+            </div>
+            <div
+              *ngIf="!game.played && log"
+              class="edit"
+              data-toggle="modal"
+              data-target="#exampleModal"
+              (click)="edit(game, i, j)"
+            >
+              <img src="assets/images/edit.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+<app-edit
+  *ngIf="popup"
+  [game]="gameForEdit"
+  [urlGame]="urlGame"
+  [urlGroup]="urlGroup"
+  [urlLeague]="urlLeague"
+  [addResultObj]="toAdd"
+></app-edit>

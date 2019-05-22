@@ -1,0 +1,90 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "assets/style/variables";
+
+body{
+    background-color: $main-color;
+    font-family: $main-font;
+}
+
+.flex{
+    display: flex;
+}
+
+.align-self{
+    align-self: center;
+}
+
+.medium-gray{
+    background-color: $medium-gray;
+}
+
+.red-text{
+    color:$lose;
+}
+
+.green-text{
+    color:$win;
+}
+
+.yellow-text{
+    color:$neutral;
+}
+
+.fw600{
+    font-weight: 600;
+}
+
+.main-subtitle{
+    font-weight: 300;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    @media #{$tablet}{
+        margin-bottom: 20px; 
+        font-size: 26px;
+    }
+}
+
+.table{
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.36);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.36);
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.36);
+    border-radius: 6px;
+    background: $table-color;
+    margin-top: 30px;
+    color:white;
+    font-size: 16px;
+    text-align: center;
+    @media #{$mobile}{
+        font-size: 14px;
+    }
+    thead{
+        background: $thead-color;
+        color: $thead-text;
+    }
+    td{
+        border-top: 1px solid $table-border;
+    }
+    th{
+        border-top: none;
+        border-bottom: none;
+    }
+    tbody{
+        tr{
+            &:hover{
+                background: $table-body-color;
+            }
+        }
+    }
+}
+.custom-save-btn{
+    background: $general-color-dark;
+    border: none;
+}
+.table-content{
+    color: white;
+}
+.holder-container{
+    @media #{$tablet}{
+        padding-top:80px; 
+    }
+}

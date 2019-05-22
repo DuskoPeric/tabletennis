@@ -1,0 +1,25 @@
+<div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="addLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Dodaj igrača</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="add-player">
+            <input  type="text" placeholder="Ime" [(ngModel)]="obj.name" (keydown)="keyDownHandler($event)">
+          </div>
+          <div class="add-player">
+              <input  type="text" placeholder="Prezime" [(ngModel)]="obj.surname" (keydown)="keyDownHandler($event)">
+            </div>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>
+          <button type="button" [disabled]="!obj.name || !obj.surname ? 'disabled':''" class="btn btn-primary custom-save-btn" data-dismiss="modal" (click)="save()">Sačuvaj</button>
+        </div>
+      </div>
+    </div>
+  </div>

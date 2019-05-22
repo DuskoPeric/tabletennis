@@ -1,0 +1,119 @@
+@import "../../assets/style/variables";
+@import "../../assets/style/mixins";
+
+aside {
+  height: 100vh;
+  position: fixed;
+  width: 117px;
+  @include box-shadow-aside();
+  @media #{$tablet} {
+    width: 100%;
+    height: 80px;
+    z-index: 1;
+    @include box-shadow-darker();
+  }
+
+  nav {
+    width: 100%;
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      @media #{$tablet} {
+        display: flex;
+      }
+      li {
+        cursor: pointer;
+        padding-bottom: 25px;
+        padding-top: 25px;
+        font-weight: 500;
+        @media #{$tablet} {
+          padding-bottom: 10px;
+          padding-top: 10px;
+          width: 85px;
+        }
+
+        &:hover {
+          .table-img {
+            background-image: url(../../assets/images/table-hover.png);
+            @include transition(all, 0.2s);
+          }
+
+          .calendar-img {
+            background-image: url(../../assets/images/calendar-hover.png);
+            @include transition(all, 0.2s);
+          }
+
+          .players-img {
+            background-image: url(../../assets/images/players-hover.png);
+            @include transition(all, 0.2s);
+          }
+
+          p {
+            color: white;
+            @include transition(all, 0.2s);
+          }
+        }
+
+        &.active {
+          background-color: $dark-gray;
+          border-left: solid 4px $general-color;
+          @media #{$tablet} {
+            border-left: none;
+            border-bottom: solid 4px $general-color;
+          }
+
+          .table-img {
+            background-image: url(../../assets/images/table-hover.png);
+            @include transition(all, 0.2s);
+          }
+
+          .calendar-img {
+            background-image: url(../../assets/images/calendar-hover.png);
+            @include transition(all, 0.2s);
+          }
+
+          .players-img {
+            background-image: url(../../assets/images/players-hover.png);
+            @include transition(all, 0.2s);
+          }
+
+          p {
+            color: white;
+          }
+        }
+        &:focus {
+          outline: 0;
+        }
+
+        div {
+          width: 28px;
+          height: 28px;
+          background-size: 100%;
+          margin: auto;
+          display: block;
+        }
+        .table-img {
+          background-image: url(../../assets/images/table.png);
+          @include transition(all, 0.2s);
+        }
+        .calendar-img {
+          background-image: url(../../assets/images/calendar.png);
+          @include transition(all, 0.2s);
+        }
+        .players-img {
+          background-image: url(../../assets/images/players.png);
+          @include transition(all, 0.2s);
+        }
+        p {
+          color: $general-color-light;
+          text-align: center;
+          font-size: 12px;
+          margin-top: 10px;
+          margin-bottom: 0px;
+          @include transition(all, 0.2s);
+        }
+      }
+    }
+  }
+}

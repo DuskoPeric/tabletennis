@@ -1,0 +1,10 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "../assets/style/variables";
+
+.main-content{
+    padding-left:117px; 
+    width: 100%;
+    @media #{$tablet}{
+        padding-left:0px; 
+    }
+}

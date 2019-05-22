@@ -1,0 +1,52 @@
+@import "../../assets/style/variables";
+@import "../../assets/style/mixins";
+
+.players-content {
+  color: white;
+  .player-container{
+    margin-bottom: 30px;
+    .player-holder{
+      background: #1d1e2f;
+      border-left: solid 4px $general-color;
+      padding: 10px 15px;
+      border-radius: 5px;
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+      @include box-shadow-darker();
+      p{
+        margin: 0px;
+      }
+    }
+  }
+  .add-player{
+    p{
+      cursor: pointer;
+      margin-top: 8px;
+      height: 50px;
+      width: 50px;
+      color: white;
+      background: $general-color;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 35px;
+    }
+
+  }
+  .edit{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: $table-border;
+    padding-top: 10px;
+    cursor: pointer;
+    &:hover{
+      background: $general-color;
+    }
+    img{
+      display: block;
+      width: 47%;
+      margin: auto;
+    }
+  }
+}

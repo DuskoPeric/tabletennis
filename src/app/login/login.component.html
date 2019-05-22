@@ -1,0 +1,8 @@
+<div class="col-sm-12 login-content">
+  <div class="col-sm-12">
+  <h2 class="main-subtitle">Log in</h2>
+    <input *ngIf="!log" type="password" [(ngModel)]="password" placeholder="password">
+    <button *ngIf="!log" (click)="login()">Log in</button>
+    <button *ngIf="log" (click)="logout()">Log out</button>
+  </div>
+</div>

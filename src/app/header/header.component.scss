@@ -1,0 +1,38 @@
+@import "../../assets/style/variables";
+@import "../../assets/style/mixins";
+
+header{
+    background-color: $light-gray;
+    @include box-shadow();
+    height: 70px;
+    z-index: 1;
+    position: fixed;
+
+    .img-holder{
+        height: 70px;
+        border-right: solid 1px $border-color;
+
+        img{
+            width: 50px;
+            margin: auto;
+        }
+    }
+    .right-button{
+        float: right;
+        margin-top: 20px;
+        background: transparent;
+        border: solid 2px $general-color;
+        border-radius: 30px;
+        color: white;
+        font-weight: 300;
+        padding: 5px 15px;
+        @include transition(all, 0.2s);  
+        &:hover{
+            background: $general-color;
+            @include transition(all, 0.2s);  
+        }
+        &:focus{
+            outline: none;
+        }
+    }
+}

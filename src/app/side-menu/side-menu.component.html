@@ -1,0 +1,48 @@
+<aside class="medium-gray side-menu">
+  <nav>
+    <ul>
+      <li
+        [routerLink]="['/']"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <div class="table-img"></div>
+        <p>Tabela</p>
+      </li>
+      <li
+        [routerLink]="['/schedule']"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <div class="calendar-img"></div>
+        <p>Raspored</p>
+      </li>
+      <li
+        [routerLink]="['/players']"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <div class="players-img"></div>
+        <p>Igrači</p>
+      </li>
+      <li
+        *ngIf="log"
+        [routerLink]="['/justforadmin']"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <p>Log out</p>
+      </li>
+      <li
+        *ngIf="log"
+        [routerLink]="['/groups']"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+      
+        <p>Admin</p>
+      </li>
+      <li id="a" (click)="admin()" style="opacity:0"></li>
+    </ul>
+  </nav>
+</aside>

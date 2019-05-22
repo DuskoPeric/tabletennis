@@ -1,0 +1,57 @@
+@import "../../../assets/style/variables";
+@import "../../../assets/style/mixins";
+
+.modal-content{
+    background: $medium-gray;
+    color:white;
+    .modal-header{
+        border-bottom: none;
+        .modal-title{
+            font-weight: 300;
+        }
+        .close{
+            background: $general-color-dark;
+            color: white;
+            width: 40px;
+            padding: 0px;
+            height: 40px;
+            opacity: 1;
+        }
+    }
+    .modal-footer{
+        border-top: none;
+    }
+    .choose-player{
+        cursor: pointer;
+        overflow: hidden;
+        display: flex;
+        background: $input-color;
+        @include box-shadow();
+        border-radius: 40px;
+        margin-bottom: 10px;
+        &.win{
+            background: $win;
+        }
+        &.lose{
+            background: $lose;
+        }
+        .name{
+            width: 70%;
+            padding: 10px 20px;
+            p{
+                margin: 0;
+            }
+        }
+        .number{
+            width: 30%;
+            text-align: center;
+            background: $input-number-color;
+            font-weight: 600;
+            border: none;
+            color: white;
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+}

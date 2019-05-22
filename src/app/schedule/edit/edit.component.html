@@ -1,0 +1,74 @@
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Dodaj rezultat</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div
+          class="choose-player"
+          [class.win]="addResultObj.winner == 'p1'"
+          [class.lose]="addResultObj.winner == 'p2'"
+        >
+          <div class="name">
+            <p>{{ game.p1 }}</p>
+          </div>
+          <input
+            class="number"
+            min="0"
+            max="3"
+            type="number"
+            [(ngModel)]="addResultObj.p1r"
+            (change)="updateResult()"
+          />
+        </div>
+        <div
+          class="choose-player"
+          [class.win]="addResultObj.winner == 'p2'"
+          [class.lose]="addResultObj.winner == 'p1'"
+        >
+          <div class="name">
+            <p>{{ game.p2 }}</p>
+          </div>
+          <input
+            class="number"
+            min="0"
+            max="3"
+            type="number"
+            [(ngModel)]="addResultObj.p2r"
+            (change)="updateResult()"
+          />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Zatvori
+        </button>
+        <button
+          [disabled]="addResultObj.winner == '' || addResultObj.p2r>3  || addResultObj.p1r>3 ? 'disabled' : ''"
+          type="button"
+          class="btn btn-primary custom-save-btn"
+          data-dismiss="modal"
+          (click)="updateGame()"
+        >
+          Sačuvaj
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

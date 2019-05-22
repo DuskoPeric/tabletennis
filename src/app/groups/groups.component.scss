@@ -1,0 +1,12 @@
+@import "../../assets/style/variables";
+@import "../../assets/style/mixins";
+.table-content{
+    padding-top: 70px;
+    color: white;
+}
+button{
+    background: $general-color;
+    border: none;
+    color: white;
+    margin-right: 15px;
+}

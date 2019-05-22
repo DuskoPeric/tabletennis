@@ -1,0 +1,24 @@
+@import "../../../assets/style/variables";
+@import "../../../assets/style/mixins";
+
+.modal-content{
+    background: $medium-gray;
+    color:white;
+    .modal-header{
+        border-bottom: none;
+        .modal-title{
+            font-weight: 300;
+        }
+        .close{
+            background: $general-color-dark;
+            color: white;
+            width: 40px;
+            padding: 0px;
+            height: 40px;
+            opacity: 1;
+        }
+    }
+    .modal-footer{
+        border-top: none;
+    }
+}
