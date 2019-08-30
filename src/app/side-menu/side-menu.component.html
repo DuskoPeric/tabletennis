@@ -26,6 +26,14 @@
         <p>Igrači</p>
       </li>
       <li
+        [routerLink]="['/playoff']"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <div class="playoff-img"></div>
+        <p>Playoff</p>
+      </li>
+      <li
         *ngIf="log"
         [routerLink]="['/justforadmin']"
         routerLinkActive="active"

@@ -49,6 +49,11 @@ aside {
             @include transition(all, 0.2s);
           }
 
+          .playoff-img {
+            background-image: url(../../assets/images/playoff-hover.png);
+            @include transition(all, 0.2s);
+          }
+
           p {
             color: white;
             @include transition(all, 0.2s);
@@ -77,6 +82,10 @@ aside {
             background-image: url(../../assets/images/players-hover.png);
             @include transition(all, 0.2s);
           }
+          .playoff-img {
+            background-image: url(../../assets/images/playoff-hover.png);
+            @include transition(all, 0.2s);
+          }
 
           p {
             color: white;
@@ -103,6 +112,10 @@ aside {
         }
         .players-img {
           background-image: url(../../assets/images/players.png);
+          @include transition(all, 0.2s);
+        }
+        .playoff-img {
+          background-image: url(../../assets/images/playoff.png);
           @include transition(all, 0.2s);
         }
         p {

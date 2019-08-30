@@ -6,11 +6,13 @@ import { PlayersComponent } from './players/players.component';
 import { GroupsComponent } from './groups/groups.component';
 import { AuthGuard } from './auth-guard.service';
 import { LoginComponent } from './login/login.component';
+import { PlayoffComponent } from './playoff/playoff.component';
 
 const routes: Routes = [
   { path: '', component: TableComponent },
   { path: 'schedule', component: ScheduleComponent },
   { path: 'players', component: PlayersComponent },
+  { path: 'playoff', component: PlayoffComponent },
   { path: 'justforadmin', component: LoginComponent },
   { path: 'groups', canActivate:[AuthGuard], component: GroupsComponent },
 ];

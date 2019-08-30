@@ -21,8 +21,9 @@ $input-color:#2f304b;
 $input-number-color:#3c3c5f;
 
 
-
+$smallscreen:"only screen and (max-width : 1200px)";
 $tablet: "only screen and (max-width : 768px)";
 $mobile: "only screen and (max-width : 480px)";
+$tinymobile: "only screen and (max-width : 350px)";
 
 $main-font:'Montserrat', sans-serif;

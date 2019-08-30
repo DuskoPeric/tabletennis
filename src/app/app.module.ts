@@ -20,6 +20,7 @@ import { AngularFireStorageModule } from 'angularfire2/storage';
 import { environment } from '../environments/environment';
 import { LoginComponent } from './login/login.component';
 import { ConfirmComponent } from './players/confirm/confirm.component';
+import { PlayoffComponent } from './playoff/playoff.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ConfirmComponent } from './players/confirm/confirm.component';
     AddComponent,
     GroupsComponent,
     LoginComponent,
-    ConfirmComponent
+    ConfirmComponent,
+    PlayoffComponent
   ],
   imports: [
     BrowserModule,
