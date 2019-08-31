@@ -3,34 +3,34 @@
     <div class="row playoff-round">
       <div class="col-sm-3">
         <div>
-          <p>Joh Doe <span>3</span></p>
+          <p>First Player<span>0</span></p>
         </div>
         <div>
-          <p>Mrmot Mrmotic <span>0</span></p>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div>
-          <p>Joh Doe <span>3</span></p>
-        </div>
-        <div>
-          <p>Mrmot Mrmotic <span>0</span></p>
+          <p>Eigth Player<span>0</span></p>
         </div>
       </div>
       <div class="col-sm-3">
         <div>
-          <p>Joh Doe <span>3</span></p>
+          <p>Second Player<span>0</span></p>
         </div>
         <div>
-          <p>Mrmot Mrmotic <span>0</span></p>
+          <p>Seventh Player<span>0</span></p>
         </div>
       </div>
       <div class="col-sm-3">
         <div>
-          <p>Joh Doe <span>3</span></p>
+          <p>Third Player<span>0</span></p>
         </div>
         <div>
-          <p>Mrmot Mrmotic <span>0</span></p>
+          <p>Sixth Player<span>0</span></p>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div>
+          <p>Fourth Player<span>0</span></p>
+        </div>
+        <div>
+          <p>Fifth Player<span>0</span></p>
         </div>
       </div>
     </div>
@@ -57,7 +57,7 @@
     <div class="row justify-content-around playoff-round no-margin-top">
       <div class="col-4">
         <div>
-          <p>Semifinalist One<span>3</span></p>
+          <p>Semifinalist One<span>0</span></p>
         </div>
         <div>
           <p>Semifinalist Two<span>0</span></p>
@@ -65,7 +65,7 @@
       </div>
       <div class="col-4">
         <div>
-          <p>Semifinalist Three<span>3</span></p>
+          <p>Semifinalist Three<span>0</span></p>
         </div>
         <div>
           <p>Semifinalist Four<span>0</span></p>
@@ -86,7 +86,7 @@
     <div class="row justify-content-center playoff-round no-margin-top">
       <div class="col-4">
         <div>
-          <p>Finalist One <span>3</span></p>
+          <p>Finalist One <span>0</span></p>
         </div>
         <div>
           <p>Finalist Two <span>0</span></p>
@@ -105,15 +105,17 @@
     </div>
     <div class="row justify-content-center playoff-round no-margin-top">
         <div class="col-4">
+          <h2 class="subt">match for 3rd place</h2>
           <div>
-            <p>Finalist One <span>3</span></p>
+            <p>Player One <span>0</span></p>
           </div>
           <div>
-            <p>Finalist Two <span>0</span></p>
+            <p>Player Two <span>0</span></p>
           </div>
         </div>
       </div>
   </div>
+  <br>
   <div class=" holder-container table-content mobile-view">
     <div class="playoff-nav mar-left-15">
       <button (click)="active='quater'" [class.active]="active=='quater'">Quoter</button>
@@ -124,49 +126,49 @@
     <div *ngIf="active=='quater'" class="col-sm-12">
         <div class="playoff-round">
             <div class="full-width">
-              <p>Semifinalist Three<span>3</span></p>
+              <p>First Player<span>0</span></p>
             </div>
             <div class="full-width">
-              <p>Semifinalist Four<span>0</span></p>
+              <p>Eight Player<span>0</span></p>
             </div>
           </div>
           <div class="playoff-round">
               <div class="full-width">
-                <p>Semifinalist Three<span>3</span></p>
+                <p>Second Player<span>0</span></p>
               </div>
               <div class="full-width">
-                <p>Semifinalist Four<span>0</span></p>
+                <p>Seventh Player<span>0</span></p>
               </div>
             </div>
             <div class="playoff-round">
                 <div class="full-width">
-                  <p>Semifinalist Three<span>3</span></p>
+                  <p>Third Player<span>0</span></p>
                 </div>
                 <div class="full-width">
-                  <p>Semifinalist Four<span>0</span></p>
+                  <p>Sixt Player<span>0</span></p>
                 </div>
               </div>
               <div class="playoff-round">
                   <div class="full-width">
-                    <p>Semifinalist Three<span>3</span></p>
+                    <p>Fourth Player<span>0</span></p>
                   </div>
                   <div class="full-width">
-                    <p>Semifinalist Four<span>0</span></p>
+                    <p>Fifth Player<span>0</span></p>
                   </div>
                 </div>
     </div>
     <div *ngIf="active=='semi'" class="col-sm-12">
         <div class="playoff-round">
             <div class="full-width">
-              <p>Semifinalist Three<span>3</span></p>
+              <p>Semifinalist One<span>0</span></p>
             </div>
             <div class="full-width">
-              <p>Semifinalist Four<span>0</span></p>
+              <p>Semifinalist Two<span>0</span></p>
             </div>
           </div>
           <div class="playoff-round">
               <div class="full-width">
-                <p>Semifinalist Three<span>3</span></p>
+                <p>Semifinalist Three<span>0</span></p>
               </div>
               <div class="full-width">
                 <p>Semifinalist Four<span>0</span></p>
@@ -176,12 +178,21 @@
     <div *ngIf="active=='final'" class="col-sm-12">
         <div class="playoff-round">
             <div class="full-width">
-              <p>Semifinalist Three<span>3</span></p>
+              <p>Finalist One<span>0</span></p>
             </div>
             <div class="full-width">
-              <p>Semifinalist Four<span>0</span></p>
+              <p>Finalist Two<span>0</span></p>
             </div>
           </div>
+          <h2 class="subt">match for 3rd place</h2>
+          <div class="playoff-round">
+              <div class="full-width">
+                <p>Player One<span>0</span></p>
+              </div>
+              <div class="full-width">
+                <p>Player Two<span>0</span></p>
+              </div>
+            </div>
     </div>
     <div *ngIf="active=='champion'" class="col-sm-12">
         <div class="champion width250">

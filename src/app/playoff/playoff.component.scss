@@ -133,3 +133,14 @@
     width:250px;
     margin: 40px auto;
 }
+.subt{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 17px;
+    text-transform: uppercase;
+    @media #{$smallscreen}{
+      text-align: left;
+      margin-top: 45px;
+      margin-bottom: 0px;
+  }
+}
