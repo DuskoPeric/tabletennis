@@ -3,34 +3,34 @@
     <div class="row playoff-round">
       <div class="col-sm-3">
         <div>
-          <p>First Player<span>0</span></p>
+          <p>{{playoff.quoter.p1}}<span>{{playoff.quoter.p1r}}</span></p>
         </div>
         <div>
-          <p>Eigth Player<span>0</span></p>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div>
-          <p>Second Player<span>0</span></p>
-        </div>
-        <div>
-          <p>Seventh Player<span>0</span></p>
+          <p>{{playoff.quoter.p2}}<span>{{playoff.quoter.p8r}}</span></p>
         </div>
       </div>
       <div class="col-sm-3">
         <div>
-          <p>Third Player<span>0</span></p>
+          <p>{{playoff.quoter.p2}}<span>{{playoff.quoter.p2r}}</span></p>
         </div>
         <div>
-          <p>Sixth Player<span>0</span></p>
+          <p>{{playoff.quoter.p7}}<span>{{playoff.quoter.p7r}}</span></p>
         </div>
       </div>
       <div class="col-sm-3">
         <div>
-          <p>Fourth Player<span>0</span></p>
+          <p>{{playoff.quoter.p3}}<span>{{playoff.quoter.p3r}}</span></p>
         </div>
         <div>
-          <p>Fifth Player<span>0</span></p>
+          <p>{{playoff.quoter.p6}}<span>{{playoff.quoter.p6r}}</span></p>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div>
+          <p>{{playoff.quoter.p4}}<span>{{playoff.quoter.p4r}}</span></p>
+        </div>
+        <div>
+          <p>{{playoff.quoter.p5}}<span>{{playoff.quoter.p5r}}</span></p>
         </div>
       </div>
     </div>
@@ -57,18 +57,18 @@
     <div class="row justify-content-around playoff-round no-margin-top">
       <div class="col-4">
         <div>
-          <p>Semifinalist One<span>0</span></p>
+          <p>{{playoff.semi.p1}}<span>{{playoff.semi.p1r}}</span></p>
         </div>
         <div>
-          <p>Semifinalist Two<span>0</span></p>
+          <p>{{playoff.semi.p2}}<span>{{playoff.semi.p2r}}</span></p>
         </div>
       </div>
       <div class="col-4">
         <div>
-          <p>Semifinalist Three<span>0</span></p>
+          <p>{{playoff.semi.p3}}<span>{{playoff.semi.p3r}}</span></p>
         </div>
         <div>
-          <p>Semifinalist Four<span>0</span></p>
+          <p>{{playoff.semi.p4}}<span>{{playoff.semi.p4r}}</span></p>
         </div>
       </div>
     </div>
@@ -86,19 +86,19 @@
     <div class="row justify-content-center playoff-round no-margin-top">
       <div class="col-4">
         <div>
-          <p>Finalist One <span>0</span></p>
+          <p>{{playoff.final.p1}}<span>{{playoff.final.p1r}}</span></p>
         </div>
         <div>
-          <p>Finalist Two <span>0</span></p>
+          <p>{{playoff.final.p2}}<span>{{playoff.final.p2r}}</span></p>
         </div>
       </div>
     </div>
     <div class="champion">
-      <img src="../../assets/images/iv.png" alt="iv">
+      <img src="http://duskoperic.com/assets/iv.png" alt="iv">
       <div class="row justify-content-center champion-holder">
           <div class="col-sm-4">
               <p>CHAMPION</p>
-              <p>the winner of the league</p>
+              <p>{{playoff.champion.name}}</p>
             </div>
       </div>
 
@@ -107,10 +107,10 @@
         <div class="col-4">
           <h2 class="subt">match for 3rd place</h2>
           <div>
-            <p>Player One <span>0</span></p>
+            <p>{{playoff.final.p3}} <span>{{playoff.final.p3r}}</span></p>
           </div>
           <div>
-            <p>Player Two <span>0</span></p>
+            <p>{{playoff.final.p4}}<span>{{playoff.final.p4r}}</span></p>
           </div>
         </div>
       </div>
@@ -126,81 +126,81 @@
     <div *ngIf="active=='quater'" class="col-sm-12">
         <div class="playoff-round">
             <div class="full-width">
-              <p>First Player<span>0</span></p>
+              <p>{{playoff.quoter.p1}}<span>{{playoff.quoter.p1r}}</span></p>
             </div>
             <div class="full-width">
-              <p>Eight Player<span>0</span></p>
+              <p>{{playoff.quoter.p8}}<span>{{playoff.quoter.p8r}}</span></p>
             </div>
           </div>
           <div class="playoff-round">
               <div class="full-width">
-                <p>Second Player<span>0</span></p>
+                <p>{{playoff.quoter.p2}}<span>{{playoff.quoter.p2r}}</span></p>
               </div>
               <div class="full-width">
-                <p>Seventh Player<span>0</span></p>
+                <p>{{playoff.quoter.p7}}<span>{{playoff.quoter.p7r}}</span></p>
               </div>
             </div>
             <div class="playoff-round">
                 <div class="full-width">
-                  <p>Third Player<span>0</span></p>
+                  <p>{{playoff.quoter.p3}}<span>{{playoff.quoter.p3r}}</span></p>
                 </div>
                 <div class="full-width">
-                  <p>Sixt Player<span>0</span></p>
+                  <p>{{playoff.quoter.p6}}<span>{{playoff.quoter.p6r}}</span></p>
                 </div>
               </div>
               <div class="playoff-round">
                   <div class="full-width">
-                    <p>Fourth Player<span>0</span></p>
+                    <p>{{playoff.quoter.p4}}<span>{{playoff.quoter.p4r}}</span></p>
                   </div>
                   <div class="full-width">
-                    <p>Fifth Player<span>0</span></p>
+                    <p>{{playoff.quoter.p5}}<span>{{playoff.quoter.p5r}}</span></p>
                   </div>
                 </div>
     </div>
     <div *ngIf="active=='semi'" class="col-sm-12">
         <div class="playoff-round">
             <div class="full-width">
-              <p>Semifinalist One<span>0</span></p>
+              <p>{{playoff.semi.p1}}<span>{{playoff.semi.p1r}}</span></p>
             </div>
             <div class="full-width">
-              <p>Semifinalist Two<span>0</span></p>
+              <p>{{playoff.semi.p2}}<span>{{playoff.semi.p2r}}</span></p>
             </div>
           </div>
           <div class="playoff-round">
               <div class="full-width">
-                <p>Semifinalist Three<span>0</span></p>
+                <p>{{playoff.semi.p3}}<span>{{playoff.semi.p3r}}</span></p>
               </div>
               <div class="full-width">
-                <p>Semifinalist Four<span>0</span></p>
+                <p>{{playoff.semi.p4}}<span>{{playoff.semi.p4r}}</span></p>
               </div>
             </div>
     </div>
     <div *ngIf="active=='final'" class="col-sm-12">
         <div class="playoff-round">
             <div class="full-width">
-              <p>Finalist One<span>0</span></p>
+              <p>{{playoff.final.p1}}<span>{{playoff.final.p1r}}</span></p>
             </div>
             <div class="full-width">
-              <p>Finalist Two<span>0</span></p>
+              <p>{{playoff.final.p2}}<span>{{playoff.final.p2r}}</span></p>
             </div>
           </div>
           <h2 class="subt">match for 3rd place</h2>
           <div class="playoff-round">
               <div class="full-width">
-                <p>Player One<span>0</span></p>
+                <p>{{playoff.final.p3}}<span>{{playoff.final.p3r}}</span></p>
               </div>
               <div class="full-width">
-                <p>Player Two<span>0</span></p>
+                <p>{{playoff.final.p4}}<span>{{playoff.final.p4r}}</span></p>
               </div>
             </div>
     </div>
     <div *ngIf="active=='champion'" class="col-sm-12">
         <div class="champion width250">
-            <img src="../../assets/images/iv.png" alt="iv">
+            <img src="http://duskoperic.com/assets/iv.png" alt="iv">
             <div class="row justify-content-center champion-holder">
                 <div>
                     <p>CHAMPION</p>
-                    <p>the winner of the league</p>
+                    <p>{{playoff.champion.name}}</p>
                   </div>
             </div>
       

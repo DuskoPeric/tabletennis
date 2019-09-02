@@ -81,4 +81,8 @@ deletePlayer(id){
     this.playersList=this.getPlayerToPlayList();
     this.playersList.push(data);
   }
+
+  getplayoff(){
+    return this.firebase.list('playoff');
+  }
 }
