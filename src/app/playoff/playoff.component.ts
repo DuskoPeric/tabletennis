@@ -9,15 +9,16 @@ import { GeneralService } from '../general.service';
 export class PlayoffComponent implements OnInit {
 
   active="quater"
-  playoff={
-  semi:{},
-  final:{},
-  quoter:{},
-  champion:{}
-}
+  loading=true;
+  playoff:any={}
   constructor(private generalService:GeneralService) { }
 
   ngOnInit() {
+    this.playoff['semi']={};
+    this.playoff['quoter']={};
+    this.playoff['final']={};
+    this.playoff['champion']={};
+
     this.getPlayoff();
   }
 
@@ -31,7 +32,7 @@ export class PlayoffComponent implements OnInit {
         y["id"]=element.key;
         this.playoff[element.key]=y;
       });
-      console.log(this.playoff)
+      this.loading=false;
     });
 
   }

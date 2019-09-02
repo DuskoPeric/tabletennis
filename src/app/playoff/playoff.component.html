@@ -1,5 +1,6 @@
 <div class="col-sm-12">
-  <div class="col-sm-12 holder-container table-content desktop-view">
+  <p *ngIf="loading" class="load">Loading...</p>
+  <div *ngIf="!loading" class="col-sm-12 holder-container table-content desktop-view">
     <div class="row playoff-round">
       <div class="col-sm-3">
         <div>
@@ -116,7 +117,7 @@
       </div>
   </div>
   <br>
-  <div class=" holder-container table-content mobile-view">
+  <div *ngIf="!loading" class=" holder-container table-content mobile-view">
     <div class="playoff-nav mar-left-15">
       <button (click)="active='quater'" [class.active]="active=='quater'">Quoter</button>
       <button (click)="active='semi'" [class.active]="active=='semi'">Semi</button>
