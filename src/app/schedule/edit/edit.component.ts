@@ -53,8 +53,8 @@ export class EditComponent implements OnInit {
         if (this.game.winner=="p1") {
           this.p1obj.wins++;
         }
-        else{
-          this.p1obj.lose++;
+        else if(this.game.winner=="p2"){
+            this.p1obj.lose++;
         }
         this.generalService.updatePlayer(this.game.p1id,this.p1obj);
       }
@@ -70,9 +70,9 @@ export class EditComponent implements OnInit {
         if (this.game.winner=="p2") {
           this.p2obj.wins++;
         }
-        else{
+        else if(this.game.winner=="p1"){
           this.p2obj.lose++;
-        }
+      }
         this.generalService.updatePlayer(this.game.p2id,this.p2obj);
       }
     }
